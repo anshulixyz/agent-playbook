@@ -1,7 +1,9 @@
-# Agent Building Playbook
+# Agent Groundwork
 
-A **decision-first, research-baked kickstart** for building LLM agents — so the next
-build starts with the right structure instead of refactoring into it.
+*A decision-first playbook for building agents — lay the groundwork before you build.*
+
+A **research-baked kickstart** for building LLM agents — so the next build starts with
+the right structure instead of refactoring into it.
 
 > **The thesis** (worth internalizing): *"Most agent failures are orchestration
 > failures, not model failures."* The model is one fallible component; reliability
@@ -66,7 +68,7 @@ flowchart LR
 Two equally valid forms (it's authored to be both):
 - **As a process** — copy this folder into any repo; it's just Markdown.
 - **As a skill** — [`SKILL.md`](./SKILL.md) is a ready Claude Code skill: drop the
-  folder into `~/.claude/skills/agent-playbook/` (or a repo's `.claude/skills/`).
+  folder into `~/.claude/skills/agent-groundwork/` (or a repo's `.claude/skills/`).
 
 MIT licensed; attribute the cited sources. PRs that add measured data or new
 patterns are the whole point.

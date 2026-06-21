@@ -1,5 +1,5 @@
 ---
-name: agent-playbook
+name: agent-groundwork
 description: >-
   Decision-first, vendor-neutral playbook for building LLM agents. Use when
   starting a new agent/agentic feature, scoping a hackathon agent build, choosing
