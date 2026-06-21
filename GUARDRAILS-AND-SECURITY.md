@@ -62,6 +62,13 @@ tool use amplifies a single injection into real-world damage.
 - **Red-teaming:** [promptfoo](https://github.com/promptfoo/promptfoo) red-team, [deepteam / OWASP-for-agents](https://www.trydeepteam.com/docs/frameworks-owasp-top-10-for-agentic-applications), [garak](https://github.com/NVIDIA/garak).
 - **Build yourself (thin):** the instruction hierarchy, the schema/fail-closed coercion, the tool-scope policy — these are domain-specific.
 
+> **Go deeper — the authoritative companion:** [OWASP Secure Agent Playbook](https://github.com/OWASP/secure-agent-playbook)
+> is the security-specific reference (OWASP-grounded *plays* and *skills* agents can
+> run: agent audits, prompt-injection testing, MCP-server review, multi-agent threat
+> modeling, with CWE/ASVS/NIST mappings). This playbook stays *general* (how to build
+> any agent well); for production security hardening + red-team automation, **adopt
+> OWASP's plays** rather than reinventing them.
+
 ## Worked example — ClaimLens (one honest example)
 - **Untrusted-data discipline:** the claim conversation and any **in-image text** are
   declared *data, not instructions*; the judge is told the **image is the source of

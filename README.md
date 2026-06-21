@@ -31,8 +31,10 @@ flowchart LR
 1. **Before writing code**, run [`DECIDE-FIRST.md`](./DECIDE-FIRST.md) — the
    conversation to have *first*: how autonomous, which pattern, build-vs-reuse. Fill
    in the one-page spec at the bottom.
-2. Pick your shape from [`PATTERNS.md`](./PATTERNS.md) (workflow patterns +
-   closed-loop / DAG / self-healing / autonomous / human-in-the-loop).
+2. Know **what kind** of agent it is ([`AGENT-TYPES.md`](./AGENT-TYPES.md)), pick your
+   shape from [`PATTERNS.md`](./PATTERNS.md) (workflow patterns + closed-loop / DAG /
+   self-healing / autonomous / HITL), and copy a proven structure from
+   [`ARCHITECTURE-REFERENCES.md`](./ARCHITECTURE-REFERENCES.md).
 3. Build against the eight competencies in [`PLAYBOOK.md`](./PLAYBOOK.md) — each with
    **practices**, **what to measure**, and **what to reuse instead of building**.
 4. Make it safe: [`GUARDRAILS-AND-SECURITY.md`](./GUARDRAILS-AND-SECURITY.md) —
@@ -49,7 +51,9 @@ flowchart LR
 | File | What it's for |
 |---|---|
 | [DECIDE-FIRST.md](./DECIDE-FIRST.md) | The pre-build decision framework + a fill-in spec. **Start here.** |
+| [AGENT-TYPES.md](./AGENT-TYPES.md) | The **kinds** of agents (copilot, RAG, tool, research, coding, verification, computer-use, multi-agent…) → which shape/autonomy each wants |
 | [PATTERNS.md](./PATTERNS.md) | Agent shapes & when each fits (incl. closed-loop · DAG · self-healing · autonomous · HITL) |
+| [ARCHITECTURE-REFERENCES.md](./ARCHITECTURE-REFERENCES.md) | How famous agents are actually built (Anthropic Research, Cognition/Devin, context engineering) — cited shapes to copy |
 | [PLAYBOOK.md](./PLAYBOOK.md) | The 8 competencies → practices · metrics · what to reuse |
 | [GUARDRAILS-AND-SECURITY.md](./GUARDRAILS-AND-SECURITY.md) | Prompt-injection defense, defense-in-depth, **agent containment / least privilege** (keep it in its rules) |
 | [BENCHMARKING.md](./BENCHMARKING.md) | Standardized agent benchmarks (GAIA, SWE-bench, τ²-bench…) + honest task-eval methodology |
@@ -75,6 +79,14 @@ patterns are the whole point.
   playbook is the *"how to design one agent well"* layer; the Loop Kit is the
   *"how to coordinate many, safely"* layer. They pair naturally: decide the agent
   here, then scale it out there.
+- **[OWASP Secure Agent Playbook](https://github.com/OWASP/secure-agent-playbook)** —
+  the authoritative, **security-specific** reference: OWASP-grounded *plays/skills*
+  that agents run (agent audits, prompt-injection testing, MCP review, multi-agent
+  threat modeling; CWE/ASVS/NIST mappings). **Different scope, not a competitor** —
+  this playbook is the *general build-decision* layer; for production security
+  hardening + red-team automation, use OWASP's plays (we point to them in
+  [`GUARDRAILS-AND-SECURITY.md`](./GUARDRAILS-AND-SECURITY.md)). Honestly: theirs is
+  deeper on security; ours is broader on *how to build the agent in the first place*.
 
 ## The honest caveat (so this stays useful, not dogma)
 
