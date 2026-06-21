@@ -1,0 +1,60 @@
+---
+name: agent-playbook
+description: >-
+  Decision-first, vendor-neutral playbook for building LLM agents. Use when
+  starting a new agent/agentic feature, scoping a hackathon agent build, choosing
+  an autonomy level (workflow / human-in-the-loop / autonomous) or orchestration
+  pattern (DAG, state machine, closed-loop, self-healing), deciding which agent
+  framework/library to reuse vs build, or setting up agent evals, reliability,
+  cost/latency, and human-in-the-loop. Triggers on "build an agent", "design an
+  agent", "agentic workflow", "which agent framework", "agent evals", "how
+  autonomous should this be".
+---
+
+# Agent Playbook (skill)
+
+A kickstart for building reliable agents. Core thesis: **most agent failures are
+orchestration failures, not model failures** — so spend your effort on the harness.
+
+## How to drive this skill
+
+When the user is about to build an agent (or asks how), do this in order — **don't
+skip straight to code**:
+
+1. **Decide first.** Walk the user through [`DECIDE-FIRST.md`](./DECIDE-FIRST.md):
+   - Is this a **workflow** (code-orchestrated) or a **dynamic agent**?
+   - **Autonomy level** — workflow / human-in-the-loop / supervised-autonomous /
+     autonomous? Name the **HITL boundary** explicitly.
+   - **Orchestration shape** from [`PATTERNS.md`](./PATTERNS.md) — pick the simplest
+     that fits.
+   - **Build vs reuse** per sub-system; consult [`OSS-LANDSCAPE.md`](./OSS-LANDSCAPE.md)
+     and prefer reading a mature repo over a blank file.
+   - Produce a filled `AGENT_SPEC.md` (template at the bottom of `DECIDE-FIRST.md`).
+   **Ask the clarifying questions before proposing an architecture.**
+
+2. **Build** against [`PLAYBOOK.md`](./PLAYBOOK.md) — the 8 competencies, each with
+   practices, what to **measure**, and what to **reuse**.
+
+3. **Prove + ship** using [`CHECKLIST.md`](./CHECKLIST.md). Especially: an eval set
+   from day one (honest about small-n), **test at the real boundary** (HTTP/tool
+   I/O, not just internals), CI gates, fail-closed outputs, and a written list of
+   honest limits.
+
+## Rules this skill enforces
+- **Simplest thing that works first** — add agency/complexity only when deterministic
+  workflows fall short (Anthropic).
+- **HITL is a design choice, decided up front** — and "escalate to human" is a
+  first-class output, never a failure.
+- **Reuse the hard sub-systems** (memory, evals/tracing, durable execution, HITL);
+  build only the thin domain glue.
+- **Honesty over headline numbers** — report variance, small-n, and what's thin.
+- **No secrets in artifacts**; **scoped commits**; **keep a decision trail**.
+
+## Files
+`README.md` (overview) · `DECIDE-FIRST.md` (start here) · `PATTERNS.md` ·
+`PLAYBOOK.md` · `OSS-LANDSCAPE.md` · `CHECKLIST.md`.
+
+> Sources are cited inline in each doc (Anthropic Building Effective Agents,
+> 12-Factor Agents, framework/eval/memory comparisons). Replace recommendations with
+> your own measured numbers as you get them.
+</content>
