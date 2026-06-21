@@ -57,9 +57,10 @@ skip straight to code**:
 - **No secrets in artifacts**; **scoped commits**; **keep a decision trail**.
 
 ## Files
-`README.md` (overview) · `DECIDE-FIRST.md` (start here) · `AGENT-TYPES.md` ·
-`PATTERNS.md` · `ARCHITECTURE-REFERENCES.md` · `PLAYBOOK.md` ·
-`GUARDRAILS-AND-SECURITY.md` · `BENCHMARKING.md` · `OSS-LANDSCAPE.md` · `CHECKLIST.md`.
+`README.md` (overview) · `LEARNING-PATH.md` (12-stage ladder) · `DECIDE-FIRST.md`
+(start here) · `AGENT-TYPES.md` · `PATTERNS.md` · `ARCHITECTURE-REFERENCES.md` ·
+`PLAYBOOK.md` · `GUARDRAILS-AND-SECURITY.md` · `BENCHMARKING.md` · `PRODUCTION.md` ·
+`OSS-LANDSCAPE.md` · `CHECKLIST.md`.
 
 > Sources are cited inline in each doc (Anthropic Building Effective Agents,
 > 12-Factor Agents, framework/eval/memory comparisons). Replace recommendations with

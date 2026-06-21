@@ -24,8 +24,9 @@ flowchart LR
   B --> C["PLAYBOOK<br/>8 competencies"]
   C --> D["GUARDRAILS &amp; SECURITY<br/>keep it in its rules"]
   C --> E["BENCHMARKING<br/>measure honestly"]
-  D --> F["CHECKLIST<br/>ship gate"]
-  E --> F
+  D --> G["PRODUCTION<br/>serve · scale · CI/CD"]
+  E --> G
+  G --> F["CHECKLIST<br/>ship gate"]
 ```
 
 ## How to use it
@@ -44,21 +45,29 @@ flowchart LR
    privilege, containment, human gates on irreversible actions).
 5. Prove it: [`BENCHMARKING.md`](./BENCHMARKING.md) — the standardized agent
    benchmarks *and* the honest task-eval methodology (why a leaderboard isn't enough).
-6. Don't reinvent: [`OSS-LANDSCAPE.md`](./OSS-LANDSCAPE.md) is the curated,
+6. Ship it: [`PRODUCTION.md`](./PRODUCTION.md) — serving, scaling, eval-gated CI/CD,
+   canary/rollback, cost caps, and prod observability.
+7. Don't reinvent: [`OSS-LANDSCAPE.md`](./OSS-LANDSCAPE.md) is the curated,
    source-cited map of frameworks/libraries per competency.
-7. Gate yourself with [`CHECKLIST.md`](./CHECKLIST.md) before you call it done.
+8. Gate yourself with [`CHECKLIST.md`](./CHECKLIST.md) before you call it done.
+
+> **New to this?** Climb it as a curriculum — [`LEARNING-PATH.md`](./LEARNING-PATH.md)
+> maps a 12-stage agent-engineering ladder (foundations → tool calling → memory →
+> orchestration → HITL → evals → observability → security → production) onto these docs.
 
 ## What's here
 
 | File | What it's for |
 |---|---|
-| [DECIDE-FIRST.md](./DECIDE-FIRST.md) | The pre-build decision framework + a fill-in spec. **Start here.** |
+| [LEARNING-PATH.md](./LEARNING-PATH.md) | The 12-stage agent-engineering ladder mapped to these docs. **New here? Start here.** |
+| [DECIDE-FIRST.md](./DECIDE-FIRST.md) | The pre-build decision framework + a fill-in spec. **Already building? Start here.** |
 | [AGENT-TYPES.md](./AGENT-TYPES.md) | The **kinds** of agents (copilot, RAG, tool, research, coding, verification, computer-use, multi-agent…) → which shape/autonomy each wants |
 | [PATTERNS.md](./PATTERNS.md) | Agent shapes & when each fits (incl. closed-loop · DAG · self-healing · autonomous · HITL) |
 | [ARCHITECTURE-REFERENCES.md](./ARCHITECTURE-REFERENCES.md) | How famous agents are actually built (Anthropic Research, Cognition/Devin, context engineering) — cited shapes to copy |
 | [PLAYBOOK.md](./PLAYBOOK.md) | The 8 competencies → practices · metrics · what to reuse |
 | [GUARDRAILS-AND-SECURITY.md](./GUARDRAILS-AND-SECURITY.md) | Prompt-injection defense, defense-in-depth, **agent containment / least privilege** (keep it in its rules) |
 | [BENCHMARKING.md](./BENCHMARKING.md) | Standardized agent benchmarks (GAIA, SWE-bench, τ²-bench…) + honest task-eval methodology |
+| [PRODUCTION.md](./PRODUCTION.md) | Operating in prod: serving (vLLM/SGLang), scaling, eval-gated CI/CD, canary/rollback, cost caps, observability |
 | [OSS-LANDSCAPE.md](./OSS-LANDSCAPE.md) | Curated, cited frameworks/libraries — reuse, don't rebuild |
 | [CHECKLIST.md](./CHECKLIST.md) | One-page pre-flight before shipping |
 | [SKILL.md](./SKILL.md) | Packaged as a Claude Code skill (open-source it as-is) |
